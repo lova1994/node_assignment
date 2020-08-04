@@ -1,0 +1,18 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "LEGO: NINTENDO",
+        "img": "https://",
+        "price": 6700
+      }
+    ],
+    "cart": [
+      {
+        "id": 1,
+        "name": "LEGO: NINTENDO",
+        "img": "https://",
+        "price": 6700
+      }
+       ]
+  } 
