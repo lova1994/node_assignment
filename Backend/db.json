@@ -2,17 +2,17 @@
     "products": [
       {
         "id": 1,
-        "name": "LEGO: NINTENDO",
+        "name": "Alien",
         "img": "https://",
-        "price": 6700
+        "price": 108
       }
     ],
     "cart": [
       {
-        "id": 1,
-        "name": "LEGO: NINTENDO",
+        "id": 2,
+        "name": "Lova",
         "img": "https://",
-        "price": 6700
+        "price": 1994
       }
        ]
   } 
