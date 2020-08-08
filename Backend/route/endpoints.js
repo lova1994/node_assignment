@@ -19,24 +19,22 @@ router.get("/cart", async (req, res) => {
 
 
 // ADD TO CART
-// router.post("/addToCart", async (req, res) => {
-//     const events = await db.get("cart");
-//     res.send(events);
-//   });
-
 router.post("/addtocart", async (req, res) => {
     const events = await db.get("cart");
-    const sending = await events.push("22").write();
+    const sending = await events.push(  {
+        "id": 1,
+        "name": "Alien",
+        "img": "https://",
+        "price": 108
+      }).write();
     res.send(sending);
   });
 
-
-// DELETE FROM CART
-
+// DELETE FROM CART 
+// Hur gör man här för att inte radera ALLT i hela cart?
 router.delete("/removefromcart", async (req, res) => {
-
     const events = await db.get('cart');
-    const send = await events.remove('alien')
+    const send = await events.remove({id:1}) // raderar det som har id 1, hur gör jag för att skicka med värde från frontend hit så att jag raderar det man klickat på?
     .write()
     res.send(send);
   });
