@@ -1,18 +1,24 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Alien",
-        "img": "https://",
-        "price": 108
-      }
-    ],
-    "cart": [
-      {
-        "id": 2,
-        "name": "Lova",
-        "img": "https://",
-        "price": 1994
-      }
-       ]
-  } 
+  "products": [
+    {
+      "id": 1,
+      "name": "Alien",
+      "img": "https://",
+      "price": 108
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "name": "Lova",
+      "img": "https://",
+      "price": 1994
+    },
+    {
+      "id": 1,
+      "name": "Alien",
+      "img": "https://",
+      "price": 108
+    }
+  ]
+}
