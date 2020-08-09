@@ -9,14 +9,14 @@
   ],
   "cart": [
     {
-      "id": 1,
+      "id": 13,
       "name": "Lova",
       "img": "https://",
-      "price": 1994
+      "price": 108
     },
     {
-      "id": 1,
-      "name": "Alien",
+      "id": 14,
+      "name": "Ananas",
       "img": "https://",
       "price": 108
     }
