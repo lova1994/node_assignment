@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+
+}
+
 body {
     text-align: center;
     font-family: fira sans, sans-serif;
     background: #222;
     color: #feebeb;
-
 }
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+img {
+    width:100%;
+}
+

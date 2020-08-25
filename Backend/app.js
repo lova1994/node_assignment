@@ -5,7 +5,7 @@ var cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
-app.use(require("./route/endpoints"));
+app.use(require("./modules/endpoints"));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
