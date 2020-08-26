@@ -7,7 +7,7 @@
       "price": 108
     },
     {
-      "id": 2,
+      "id": 1,
       "name": "Monkey",
       "img": "https://",
       "price": 108
@@ -15,20 +15,14 @@
   ],
   "cart": [
     {
-      "id": 13,
+      "id": 12,
       "name": "Lova",
       "img": "https://",
       "price": 108
     },
     {
-      "id": 1,
+      "id": 12,
       "name": "Aliens",
-      "img": "https://",
-      "price": 108
-    },
-    {
-      "id": 1,
-      "name": "MONKEYS",
       "img": "https://",
       "price": 108
     }

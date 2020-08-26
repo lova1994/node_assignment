@@ -37,12 +37,11 @@ const getCart = async () =>   {
   }
 
 
-
  //check if the product exists 
  const hasProduct =  async id => {
     return await db
     .get('products')
-    .find({id: 1})
+    .find({id: id})
     .value();
 }
 
@@ -50,7 +49,7 @@ const getCart = async () =>   {
   const hasProductInCart =  async id => {
       return await db
       .get('cart')
-      .find({id: 1})
+      .find({id: id})
       .value();
   }
 
