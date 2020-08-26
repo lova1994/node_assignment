@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": 12,
       "name": "Alien",
       "img": "https://",
       "price": 108
@@ -24,7 +24,13 @@
       "id": 1,
       "name": "Aliens",
       "img": "https://",
-      "price": 7
+      "price": 108
+    },
+    {
+      "id": 1,
+      "name": "MONKEYS",
+      "img": "https://",
+      "price": 108
     }
   ]
 }

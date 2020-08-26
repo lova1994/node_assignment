@@ -1,50 +1,54 @@
-// // Hämtar alla produkter i databasen
-//  async function getProduct(){
-//     console.log("Hämtar produkter...")
-//     try {
-//         let get = await fetch('http://localhost:2000/products');
-//         let response = await get.json();
-//         console.log(response);
-//         console.log(response[0].name);
-//         console.log(response[0].price);
-//     } catch {
-//         console.log("Error")
-//     }
-// };
+// Hämtar alla produkter i databasen
+ async function getProduct(){
+    console.log("Hämtar produkter...")
+    try {
+        let get = await fetch('http://localhost:2000/products');
+        let response = await get.json();
+        console.log(response);
+        console.log(response[0].name);
+        console.log(response[0].price);
+    } catch {
+        console.log("Error")
+    }
+};
 
-// // Hämtar allt i cart i DATABAS
-//  async function getCart(){
-//     console.log("Get stuff in cart...")
-//     try {
-//         let get = await fetch('http://localhost:2000/cart');
-//         let response = await get.json();
-//         console.log(response);
-//         console.log(response[0].name);
-//         console.log(response[0].price);
-//     } catch {
-//         console.log("Error")
-//     }
-// };
+// Hämtar allt i cart i DATABAS
+ async function getCart(){
+    console.log("Get stuff in cart...")
+    try {
+        let get = await fetch('http://localhost:2000/cart');
+        let response = await get.json();
+        console.log(response);
+        console.log(response[0].name);
+        console.log(response[0].price);
+    } catch {
+        console.log("Error")
+    }
+};
 
-// // Radera cart i DATABAS
-// async function removeFromCart(){
-//     console.log("Remove stuff in cart...")
-//     try {
-//          let get = await fetch('http://localhost:2000/removefromcart/:id');
-//         let response = await get.json();
-//         console.log(response);
-//         console.log(response[0].name);
-//         console.log(response[0].price);
-//     } catch {
-//         console.log("Error")
-//     }
-// };
+// Radera cart i DATABAS
+async function removeFromCart(){
+    console.log("Remove stuff in cart...")
+    try {
+        let get = await fetch('http://localhost:2000/removefromcart/:id');
+        let response = await get.json();
+        console.log(response);
+        console.log(response[0].name);
+        console.log(response[0].price);
+    } catch {
+        console.log("Error")
+    }
+};
 
-// function addToCart() {
-//     let test = {id: 1, price: 10}
+// ADD PRODUCT TO CART
+// async function addToCart() {
+//     let test = {id: 4, name: "Safari", price: 10}
 //     console.log("AddProduct körs...")
+//     console.log(test)
+//     console.log(JSON.stringify(test))
+
 //     const url = 'http://localhost:2000/addtocart';
-//   fetch(url, { method: 'POST',
+//   await fetch(url, { method: 'POST',
 //     headers: {
 //       Accept: 'application/json',
 //       'Content-Type': 'application/json'
@@ -60,5 +64,20 @@
 //     });
 //   };  
 
-// // getProduct()
-// // addToCart()
+// lägger till produkt i varukorgen
+// export const addToCart = async i => {
+//     await fetch("/addtocart" + i, {
+//       method: "POST"
+//     })
+//       .then(response => {
+//         return response.json();
+//       })
+   
+//       .catch(error => {
+//         console.error(error);
+//       });
+//   };
+
+    getCart()
+    getProduct()
+    // addToCart()

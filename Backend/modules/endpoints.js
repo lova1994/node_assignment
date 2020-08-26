@@ -1,3 +1,9 @@
+// const express = require("express");
+// const router = express.Router();
+// const db = require("./db-operations");
+
+
+
 
 const express = require("express");
 const router = express.Router();
@@ -23,7 +29,7 @@ router.get("/products", async (req, res) => {
 
 //GET CART
 router.get("/cart", async (req, res) => {
-  const events = await db.get("cart");
+  const events = await db.getCart();
   res.send(events);
   console.log("router.Get cart runs...")
 
@@ -40,28 +46,27 @@ router.get("/cart", async (req, res) => {
 
 // ADD TO CART
 router.post("/addtocart", async (req, res) => {
-    const test = req.body.test;
-    console.log(test, 'it works!!!!!!!!!!!!!!!!!!!');
-    // console.log(res.status)
-    const events = await db.get("cart");
+  const events = await db.getCart();
+  const id = 1; // change to dynamic when u understand how to do that ;)
 
-    // const product = await db.findProduct(id) // denna 1an ska hämtas från en annan funktion :) ?? va
-    // if id = 1 (if id already exist, write error)
-    // console.log(product)
+  const productExist = await db.hasProduct(id);
 
-    const sending = await events.push(  {
-        "id": 1,
-        "name": "Test",
-        "img": "https://",
-        "price": 108
-      }).write();
-    res.send(sending);
-  });
+  if (productExist) {
+ 
+
+  const sending = await events.push(  { 
+      "id": id,
+      "name": "MONKEYS",
+      "img": "https://",
+      "price": 108
+    }).write();
+  res.send(sending);
+} });
 
 
 //   DELETE FROM CART 
 router.delete(`/removefromcart/:id`, async (req, res) => {
-    const events = await db.get('cart');
+    const events = await db.getCart();
     // let id =  req.params.id; // req.params funkar men den funkar inte där nere
     let id = 1;
     console.log("id från url = " + id)
