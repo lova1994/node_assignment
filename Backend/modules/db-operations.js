@@ -15,8 +15,8 @@ const db = lowdb(adapter);
 
 // GET PRODUCTS
 const getProducts = async () =>   {
-return await db.get("products");
-};
+    return await db.get("products");
+    };
 
 
 // GET CART
@@ -52,9 +52,6 @@ const getCart = async () =>   {
       .find({id: id})
       .value();
   }
-
-
-
 
 module.exports = {
     getProducts,
