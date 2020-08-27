@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Bulbasaur",
-      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "img": "https://",
       "price": 108
     },
     {
@@ -12,33 +12,30 @@
       "img": "https://cdn.bulbagarden.net/upload/7/73/004Charmander.png",
       "price": 108
     },
-
     {
       "id": 3,
       "name": "Pikachu",
       "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
       "price": 108
     }
-
-
   ],
   "cart": [
     {
-      "id": 12,
-      "name": "Lova",
-      "img": "https://",
-      "price": 108
-    },
-    {
-      "id": 12,
-      "name": "Aliens",
-      "img": "https://",
-      "price": 108
-    },
-    {
       "id": 1,
-      "name": "Monkey",
+      "name": "Bulbasaur",
       "img": "https://",
+      "price": 108
+    },
+    {
+      "id": 2,
+      "name": "Charmander",
+      "img": "https://cdn.bulbagarden.net/upload/7/73/004Charmander.png",
+      "price": 108
+    },
+    {
+      "id": 3,
+      "name": "Pikachu",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
       "price": 108
     }
   ]

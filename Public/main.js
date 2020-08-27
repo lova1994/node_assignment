@@ -1,34 +1,51 @@
 // import { isMainThread } from "worker_threads";
-import { hej } from './modules/hej.js'
-// import {getProduct} from './modules/getProduct.js'
 
 
-hej()
+function addEventListeners() {
+    //Hämtar alla produkter med id .product
+    //Sätter en event listener på varje produkt 
+    const pickProduct = document.querySelectorAll("#product");
+    for(let i = 0; i < pickProduct.length; i++) {
+        pickProduct[i].addEventListener('click', (event) => {
+            //Hämtar product-id från det elementet man klickade på
+            const id = event.srcElement.getAttribute('product-id');
+            console.log("Hämtar produkt ID: " + id)
+            addToCart(id)
+            console.log("addeventlisteners")
+        });
+    }
+}
 
 
-
+getProduct()
 // Hämtar alla produkter i databasen
-   async function getProduct() {
+async function getProduct() {
+    
     console.log("Hämtar produkter...")
     try {
         let get = await fetch('http://localhost:2000/products');
         let response = await get.json();
         const productElement = document.getElementById('products');
-    
+
+
         // SKRIVER UT ALLA PRODUKTER I FRONTEND
-        response.forEach(product =>  
+        response.forEach(product =>
             productElement.innerHTML += `
             <img src="${product.img}">
-            <p id="${product.id}">${product.name}</p>        
-            `)
+            <p product-id="${product.id}"   >${product.name}</p>  
+            <p product-id="${product.id}"  >${product.price}kr</p>  
+            <button id="product" product-id="${product.id}"  > Add to cart </button>      
+            `
+            )
 
+            addEventListeners()
+        
 
     } catch {
         console.log("Error")
     }
 };
 
-getProduct()
 
 
 // Hämtar allt i cart i DATABAS
@@ -37,9 +54,18 @@ export async function getCart() {
     try {
         let get = await fetch('http://localhost:2000/cart');
         let response = await get.json();
-        // console.log(response);
-        // console.log(response[0].name);
-        // console.log(response[0].price);
+        const productElement = document.getElementById('products');
+
+        // SKRIVER UT ALLA PRODUKTER I KUNDVADNEN I FRONTEND
+        response.forEach(product =>
+            productElement.innerHTML += `
+            <img src="${product.img}">
+            <p id="${product.id}">${product.name}</p>  
+            <p id="${product.id}">${product.price}kr</p>  
+
+
+            `)
+
     } catch {
         console.log("Error")
     }
@@ -60,12 +86,15 @@ async function removeFromCart() {
 };
 
 // ADD PRODUCT TO CART
-async function addToCart() {
+async function addToCart(id) {
+
+    let productId = parseInt(id)
     let test = {
-        id: id
+        id: productId
     }
     console.log("AddToCart körs...")
     console.log(test)
+    console.log("id from addToCart " + id + typeof(id))
 
     const url = 'http://localhost:2000/addtocart';
     await fetch(url, {
@@ -88,7 +117,4 @@ async function addToCart() {
 
         });
 };
-
-// addToCart()
-
 
