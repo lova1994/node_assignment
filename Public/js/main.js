@@ -1,7 +1,6 @@
 // import { isMainThread } from "worker_threads";
 
-
-function addEventListeners() {
+export function addEventListeners() {
     //Hämtar alla produkter med id product
     //Sätter en event listener på varje produkt 
     const pickProduct = document.querySelectorAll("#product");
@@ -26,19 +25,16 @@ async function getProduct() {
         let response = await get.json();
         const productElement = document.getElementById('products');
 
-
         // SKRIVER UT ALLA PRODUKTER I FRONTEND
         response.forEach(product =>
             productElement.innerHTML += `
             <img src="${product.img}">
             <p product-id="${product.id}"   >${product.name}</p>  
             <p product-id="${product.id}"  >${product.price}kr</p>  
-            <button id="product" product-id="${product.id}"  > Add to cart </button>      
+            <button id="product" product-id="${product.id}"  > Catch </button>      
             `
             )
-
             addEventListeners()
-        
 
     } catch {
         console.log("Error")
@@ -59,8 +55,6 @@ async function getProduct() {
 //             <img src="${cartItem.img}">
 //             <p id="${cartItem.id}">${cartItem.name}</p>  
 //             <p id="${cartItem.id}">${cartItem.price}kr</p>  
-
-
 //             `)
 
 //     } catch {
@@ -69,18 +63,19 @@ async function getProduct() {
 // };
 
 // Radera cart i DATABAS
-async function removeFromCart() {
-    console.log("Remove stuff in cart...")
-    try {
-        let get = await fetch('http://localhost:2000/removefromcart/:id');
-        let response = await get.json();
-        console.log(response);
-        // console.log(response[0].name);
-        // console.log(response[0].price);
-    } catch {
-        console.log("Error")
-    }
-};
+// async function removeFromCart(id) {
+//     console.log("Remove stuff in cart...")
+//     try {
+//         let get = await fetch('http://localhost:2000/removefromcart/:id');
+//         let response = await get.json();
+//         console.log(response);
+//         // console.log(response[0].name);
+//         // console.log(response[0].price);
+//     } catch {
+//         console.log("Error")
+//     }
+// };
+
 
 // ADD PRODUCT TO CART
 async function addToCart(id) {
@@ -109,6 +104,7 @@ async function addToCart(id) {
             console.log(`Status =  ${data.status}`)
         })
         .catch(error => {
+            console.log("FUNKADE EJ")
             console.error(error);
             console.log(`Status =  ${data.status}`)
 
