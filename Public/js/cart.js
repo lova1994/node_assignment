@@ -1,6 +1,6 @@
 // import { removeFromCart } from "../../Backend/modules/db-operations";
 
-export function addEventListeners() {
+export function addEventListenersCart() {
     //Hämtar alla produkter med id cart
     //Sätter en event listener på varje cart 
     const pickProduct = document.querySelectorAll("#cart");
@@ -9,7 +9,6 @@ export function addEventListeners() {
             //Hämtar product-id från det elementet man klickade på
             const id = event.srcElement.getAttribute('product-id');
             console.log("Hämtar cart ID: " + id)
-            console.log("dslgkjvdosjfpskfdsojfosidjfvogfsjdfpoekfpojsofijaiosjfoiej" . id)
             removeFromCart(id)
             console.log("addeventlisteners")
         });
@@ -17,7 +16,6 @@ export function addEventListeners() {
 }
 
 getCart()
-
 
 // Hämtar allt i cart i DATABAS
 export async function getCart() {
@@ -41,9 +39,7 @@ export async function getCart() {
             <p cart-id="${cartItem.id}"  >${cartItem.price}kr</p>  
             <button id="cart" product-id="${cartItem.id}"  > Remove from cart </button>                `
             )
-
-            addEventListeners()
-
+            addEventListenersCart()
         }
 
     } catch {
@@ -52,11 +48,12 @@ export async function getCart() {
 };
 
 async function removeFromCart(id) {
-
     let productId = parseInt(id)
     let test = {
         id: productId
     }
+    location.reload();
+
     console.log("RemoveFromCart körs...")
     console.log(test)
     console.log("id from addToCart " + id + typeof(id))
@@ -82,11 +79,3 @@ async function removeFromCart(id) {
 
         });
 };
-
-
-
-
-
-
-
-

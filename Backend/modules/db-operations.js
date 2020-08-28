@@ -4,26 +4,15 @@ const fileSync = require("lowdb/adapters/FileSync");
 const adapter = new fileSync("db.json");
 const db = lowdb(adapter);
 
-// db init (ngl ive no clue what the point of this code is, prolly should remove it )
-
-// const initiateDb = () => {
-//     const hasProduct = db.has("products");
-//     const hasCart = db.has("cart");
-
-//     // add some more stuff here l8er
-// }
-
 // GET PRODUCTS
 const getProducts = async () =>   {
     return await db.get("products");
     };
 
-
 // GET CART
 const getCart = async () =>   {
     return await db.get("cart");
     };
-
 
 // // ADD TO CART
 // const addToCart = async test => {

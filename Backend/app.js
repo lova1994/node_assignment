@@ -8,6 +8,9 @@ app.use(cors());
 app.use(express.json());
 app.use(require("./modules/endpoints"));
 
+app.use(express.static('../Public'))
+
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

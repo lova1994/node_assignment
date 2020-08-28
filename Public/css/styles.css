@@ -22,3 +22,44 @@ img {
     width:200px;
 }
 
+button {
+    border:none;
+    background: #222;
+    width:50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pokeball {
+    width:70px;
+    cursor: pointer;
+}
+
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+  }
+
+  .centered {
+    cursor: pointer;
+
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  #button {
+      border: solid 3px #fff;
+      border-radius: 3px;
+      padding: 2%;
+      background: #D33F59;
+      color: #222;
+  }
