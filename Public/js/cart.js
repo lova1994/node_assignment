@@ -34,7 +34,7 @@ export async function getCart() {
         // SKRIVER UT ALLA PRODUKTER I KUNDVADNEN I FRONTEND
         response.forEach(cartItem =>
             cartElement.innerHTML += `
-            <div>
+            <div class="box">
             <img src="${cartItem.img}">
             <p cart-id="${cartItem.id}"   >${cartItem.name}</p>  
             <p cart-id="${cartItem.id}"  >${cartItem.price}cp</p>  
