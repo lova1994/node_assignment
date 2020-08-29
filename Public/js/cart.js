@@ -34,10 +34,12 @@ export async function getCart() {
         // SKRIVER UT ALLA PRODUKTER I KUNDVADNEN I FRONTEND
         response.forEach(cartItem =>
             cartElement.innerHTML += `
+            <div>
             <img src="${cartItem.img}">
             <p cart-id="${cartItem.id}"   >${cartItem.name}</p>  
-            <p cart-id="${cartItem.id}"  >${cartItem.price}kr</p>  
-            <button id="cart" product-id="${cartItem.id}"  > Remove from cart </button>                `
+            <p cart-id="${cartItem.id}"  >${cartItem.price}cp</p>  
+            <button id="cart-btn" product-id="${cartItem.id}"  > Set the pokemon free</button>   
+            </div>             `
             )
             addEventListenersCart()
         }

@@ -37,6 +37,12 @@
       "name": "Bulbasaur",
       "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
       "price": 108
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+      "price": 108
     }
   ]
 }

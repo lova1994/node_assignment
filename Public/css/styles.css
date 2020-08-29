@@ -4,7 +4,9 @@
 h1, h2 {
     font-family: 'Indie Flower', cursive;
 }
-
+p {
+    margin: 2%;
+}
 body {
     text-align: center;
     font-family: fira sans, sans-serif;
@@ -21,7 +23,7 @@ img {
     width:200px;
 }
 
-button {
+.button {
     border:none;
     background: #222;
     width:50px;
@@ -55,10 +57,27 @@ button {
 
   }
 
-  #button {
+  #button,#cart-btn {
       border: solid 3px #fff;
       border-radius: 3px;
-      padding: 2%;
+      padding: 10px;
       background: #D33F59;
       color: #222;
   }
+
+#cart-btn {
+align-items: center;
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box div {
+    width: 100px;
+    height: 100px;
+  }
+
